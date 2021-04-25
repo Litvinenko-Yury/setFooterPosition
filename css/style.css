@@ -1,0 +1,74 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+:before,
+:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  background-color: #008ef4;
+}
+
+.wrap {
+  position: relative;
+  min-width: 320px;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+}
+
+.page {
+  background-color: rgba(220, 20 ,60 , 0.25);
+}
+
+.page__inner {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+}
+.page__inner:last-child {
+  margin-bottom: 0;
+}
+
+/***********************/
+/***START style for .footer**/
+.footer {
+  padding: 10px;
+  background-color: darkviolet;
+}
+
+.footer__text {
+  margin: 0;
+  font-size: 12px;
+  text-align: justify;
+}
+
+.footer__link-outer {
+  display: block;
+  width: 40%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding: 10px; /* что-бы было легче попасть*/
+  text-align: center;
+  cursor: pointer;
+  outline: 1px dotted coral;
+}
+
+.footer__link {
+  display: block;
+  width: 40%;
+  margin: 0 auto;
+  padding: 10px; /* что-бы было легче попасть*/
+  text-align: center;
+  cursor: pointer;
+  outline: 1px dotted red;
+}
+
+/***END style for .footer***/
+/*********************/
