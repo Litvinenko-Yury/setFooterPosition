@@ -1,10 +1,10 @@
 'use strict';
 
 window.addEventListener('DOMContentLoaded', () => {
-  setFooterPosition('#footer'); // запускать функцию при старте страницы
+  setFooterPosition('#footer'); // запускаем функцию при старте страницы
 
   window.addEventListener('resize', () => {
-    setFooterPosition('#footer'); // запускать функцию при изменении размеров вьюпорта
+    setFooterPosition('#footer'); // запускаем функцию при изменении размеров вьюпорта
   });
 
   function setFooterPosition(a) {
