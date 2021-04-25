@@ -14,4 +14,4 @@
   - функция вычисляет высоту вьюпорт, и абсолютно позиционирует футер относительно низа вьюпорт с необходимым смещением.
   - смещение футера задается в переменной b.  
 
-  ## 2. Собранный проект на gh-pages: https://litvinenko-yury.github.io/setFooterPosition/  
+  ### 2. Собранный проект на gh-pages: https://litvinenko-yury.github.io/setFooterPosition/  
