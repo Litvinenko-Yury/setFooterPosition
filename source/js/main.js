@@ -8,16 +8,31 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   function setFooterPosition(a) {
-    const footer = document.querySelector(a); // находим нужный элемент
-    const heightViewport = document.documentElement.clientHeight; //найти высоту вьюпорта
+    const footer = document.querySelector(a), // находим footer
+      heightViewport = document.documentElement.offsetHeight, //найти высоту вьюпорта
+      widthViewport = document.documentElement.offsetWidth; //найти ширину вьюпорта
 
-    const b = -60; // на сколько смещать footer относительно низа вьюпорта
-    let footerOffsetX = heightViewport + b; // вычисление позиции footer относительно родителя
+    /**объект со значениями смещения футера для разных экранов*/
+    const obj = {
+      tab: -76,
+      mob: -60
+    };
+
+    let footerOffsetX;
+    if (widthViewport >= 768 && heightViewport > 500) {
+      footerOffsetX = heightViewport + obj.tab; // вычисление позиции footer относительно родителя
+    } else {
+      footerOffsetX = heightViewport + obj.mob;
+    }
 
     //расположить footer на нужное кол-во пикселей выше низа вьюпорта
-    footer.style.position = 'absolute';
-    footer.style.top = `${footerOffsetX}px`;
+    if (widthViewport < 1260) {
+      footer.style.position = 'absolute';
+      footer.style.top = `${footerOffsetX}px`;
+    } else {
+      footer.style.position = 'fixed';
+      footer.style.bottom = `0px`;
+      footer.style.top = `auto`;
+    }
   }
-
-  //При необходимости, можно добавить изменение footerOffsetX при изменении вертикальных padding и размера шрифта для desktop
 });
