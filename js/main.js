@@ -27,9 +27,17 @@ window.addEventListener('DOMContentLoaded', () => {
 
     //расположить footer на нужное кол-во пикселей выше низа вьюпорта
     if (widthViewport < 1260) {
-      footer.style.position = 'absolute';
-      footer.style.top = `${footerOffsetX}px`;
+      if (heightViewport <= 88) {
+        // координаты для mob и tab
+        footer.style.position = 'absolute';
+        footer.style.top = `${footerOffsetX + 20}px`;
+      } else {
+        // координаты для mob и tab
+        footer.style.position = 'absolute';
+        footer.style.top = `${footerOffsetX}px`;
+      }
     } else {
+      // координаты для desk
       footer.style.position = 'fixed';
       footer.style.bottom = `0px`;
       footer.style.top = `auto`;
