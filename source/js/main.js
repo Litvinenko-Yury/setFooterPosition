@@ -28,7 +28,7 @@ window.addEventListener('DOMContentLoaded', () => {
     //расположить footer на нужное кол-во пикселей выше низа вьюпорта
     if (widthViewport < 1260) {
       if (heightViewport <= 88) {
-        // координаты для mob и tab
+        // координаты для mob height <=88px
         footer.style.position = 'absolute';
         footer.style.top = `${footerOffsetX + 20}px`;
       } else {
